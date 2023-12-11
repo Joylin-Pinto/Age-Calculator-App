@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <form action="" onsubmit="handleonsubmit(event)">
+      <div class="input">
+        <div class="inputs">
+          <div class="inp-title">DAY</div>
+          <input type="text" maxlength="2" pattern="\d*" id="date" class="customNumberInput" placeholder="DD">
+          <div class="err-title" >This field is required </div>
+        </div>
+        <div class="inputs">
+          <div class="inp-title">MONTH</div>
+          <input type="text" maxlength="2"  pattern="\d*" id="month" class="customNumberInput" placeholder="MM">
+          <div class="err-title">This field is required </div>
+        </div>
+        <div class="inputs">
+          <div class="inp-title">YEAR</div>
+          <input type="text" maxlength="4"  pattern="\d*" id="year" class="customNumberInput" placeholder="YYYY">
+          <div class="err-title">This field is required </div>
+        </div>
+      </div>
+      <div class="dis-row">
+      <hr>
+      <button type="submit"><img src="./assets/images/icon-arrow.svg"></button>
+    </div>
+    </form>
+    <div class="result-com">
+      <span class="result-purple" id="resultYears">-- </span><span class="result-text">years</span><br>
+      <span class="result-purple" id="resultMonth">-- </span><span class="result-text">months</span><br>
+      <span class="result-purple" id="resultDate">-- </span><span class="result-text">days</span><br>
+    </div>
+  </main>
+  <script src="script.js"></script> 
+</body>
+</html>
+ 
