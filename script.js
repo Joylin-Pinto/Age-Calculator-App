@@ -19,9 +19,26 @@ function handleonsubmit(event){
   let C_year =  currDate.getFullYear()  
   let daysInMonth = getDaysInMonth(C_month, C_date)
   console.log(daysInMonth)
-  if(date==="" || month === "" || year ===""){
-    date.classList.add('.err-title')
+  if (date === "" || month === "" || year === "") {
+    for (let i = 0; i < err.length; i++) {
+      err[i].style.display = 'flex';
+    }
+    if (date !== "") {
+      err[0].style.display = 'none';
+    }
+    if (month !== "") {
+      err[1].style.display = 'none';
+    }
+    if (year !== "") {
+      err[2].style.display = 'none';
+    }
+  } else {
+    for (let i = 0; i < err.length; i++) {
+      err[i].style.display = 'none';
+    }
   }
+  
+  
  
   resYear.innerHTML= C_year-year 
   if(C_month>month){
